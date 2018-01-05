@@ -1,0 +1,36 @@
+div[id^=content-body] {
+  background-color: black;
+  color: white;
+}
+
+div[id^=content-body] a {
+  color: #337ab7;
+}
+
+div[id^=content-body] > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+div[id^=content-body] h3 {
+  font: bold 20px/1em "McClatchy Sans Cond", Arial, sans-serif;
+  color: #ffcf28;
+  margin: 3rem auto 1rem;
+}
+
+div[id^=content-body] p {
+  font: 500 18px "McClatchy Sans Cond" , Arial, sans-serif;
+}
+
+div[id^=content-body] .social svg {
+  width: 64px;
+  height: 64px;
+  fill: white;
+  cursor: pointer;
+}
+
+div[id^=content-body] #videos {
+  min-width: 100%;
+  border: none;
+  background-color: black;
+}

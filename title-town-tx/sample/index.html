@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Sinclair Dev Template</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="https://mcclatchy.github.io/fuse/css/fonts.css">
+    <link rel="stylesheet" href="https://mcclatchy.github.io/fuse/css/flex-layout.css">
+    <link rel="stylesheet" href="https://mcclatchy.github.io/fuse/css/typography.css">
+    <link rel="stylesheet" href="https://mcclatchy.github.io/fuse/css/fuse.css">
+    <link rel="stylesheet" href="https://mcclatchy.github.io/fuse/css/template.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Newspaper Flag</h1>
+        <nav>
+          <a href="https://mcclatchy.github.io/fuse/">HOME</a>
+          <a href="#">SECTION</a>
+          <a href="#">SECTION</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="content-body">
+      <style>div[id^=content-body]{background-color:#000;color:#fff}div[id^=content-body] a{color:#337ab7}div[id^=content-body]>:last-child{margin-bottom:0;padding-bottom:20px}div[id^=content-body] h3{font:700 20px/1em mcclatchy sans cond,Arial,sans-serif;color:#ffcf28;margin:3rem auto 1rem}div[id^=content-body] p{font:500 18px mcclatchy sans cond,Arial,sans-serif}div[id^=content-body] .social svg{width:64px;height:64px;fill:#fff;cursor:pointer}div[id^=content-body] #videos{min-width:100%;border:0;background-color:#000}</style>
+
+      <figure class="tight vertical center layout" style="padding-top: 1rem;">
+        <img src="../img/star-telegram-series.png" width="292">
+        <img src="../img/title_animated.gif" width="720" style="padding-top: 5px;">
+      </figure>
+
+      <figure class="fill" style="max-width: 1200px; padding-top: 0;">
+        <script>  
+          window.addEventListener("message", e => {    
+            let d = e.data;    
+            if(d.sentinel == 'amp') {      
+              document.querySelector('#videos').style.height = d.height + 'px';    
+            }  
+
+            if(d.sentinel == 'video-scroll') {
+              document.querySelector('#videos').scrollIntoView();
+            }
+          });
+        </script>
+        <iframe 
+          src="../" 
+          height="675" 
+          id="videos" 
+          resizable="true"
+          scrolling="no"></iframe>
+      </figure>
+
+      <div class="text-center">
+        <h3>FOLLOW US</h3>
+        <div class="social horizontal center-justified layout">
+          <a href="https://www.facebook.com/titletownTX/">
+            <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1376 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-188v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-532q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960z"/></svg>
+          </a>
+          <a target="popup" onclick="window.open('https://twitter.com/intent/user?screen_name=titletowntx','name','width=550,height=556')">
+            <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1408 610q-56 25-121 34 68-40 93-117-65 38-134 51-61-66-153-66-87 0-148.5 61.5t-61.5 148.5q0 29 5 48-129-7-242-65t-192-155q-29 50-29 106 0 114 91 175-47-1-100-26v2q0 75 50 133.5t123 72.5q-29 8-51 8-13 0-39-4 21 63 74.5 104t121.5 42q-116 90-261 90-26 0-50-3 148 94 322 94 112 0 210-35.5t168-95 120.5-137 75-162 24.5-168.5q0-18-1-27 63-45 105-109zm256-194v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></svg>
+          </a>
+          <a target="popup" onclick="window.open('https://www.snapchat.com/add/titletowntexas','name','width=550,height=556')">
+            <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1408 1148q0-22-22-27-67-14-118-58t-80-109q-7-14-7-25 0-15 19.5-26t42.5-17 42.5-20.5 19.5-36.5q0-19-18.5-31.5t-38.5-12.5q-11 0-31 8t-32 8q-4 0-12-2 5-63 5-115 0-78-17-114-36-78-102.5-121.5t-152.5-43.5q-198 0-275 165-18 38-18 115 0 38 6 114-10 2-15 2-11 0-31.5-8t-30.5-8q-20 0-37.5 12.5t-17.5 32.5q0 21 19.5 35.5t42.5 20.5 42.5 17 19.5 26q0 11-7 25-64 138-198 167-22 5-22 27 0 47 138 69 2 5 6 26t11 30.5 23 9.5q13 0 38.5-5t38.5-5q35 0 67.5 15t54.5 32.5 57.5 32.5 76.5 15q43 0 79-15t57.5-32.5 54-32.5 67.5-15q13 0 39 4.5t39 4.5q15 0 22.5-9.5t11.5-31 5-24.5q138-22 138-69zm256-732v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></svg>
+          </a>
+          <a target="popup" onclick="window.open('https://www.instagram.com/titletowntx/?ref=badge','name','width=550,height=556')">
+            <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z"/></svg>
+          </a>
+          <a target="_blank" href="http://www.star-telegram.com/customer-service/newsletter-signup/">
+            <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1376 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960zm32 1056v-436q-31 35-64 55-34 22-132.5 85t-151.5 99q-98 69-164 69t-164-69q-47-32-142-92.5t-142-92.5q-12-8-33-27t-31-27v436q0 40 28 68t68 28h832q40 0 68-28t28-68zm0-573q0-41-27.5-70t-68.5-29h-832q-40 0-68 28t-28 68q0 37 30.5 76.5t67.5 64.5q47 32 137.5 89t129.5 83q3 2 17 11.5t21 14 21 13 23.5 13 21.5 9.5 22.5 7.5 20.5 2.5 20.5-2.5 22.5-7.5 21.5-9.5 23.5-13 21-13 21-14 17-11.5l267-174q35-23 66.5-62.5t31.5-73.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h3>FACEBOOK</h3>
+        <figure class="vertical center layout" style="margin-top: 0;">
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FtitletownTX&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </figure>
+      </div>
+
+      <div class="text-center" style="max-width: 920px;">
+        <h3>ABOUT THIS SERIES</h3>
+        <p style="margin-top: 0;">Season 2 of Titletown, TX chronicles the Texas Wesleyan Rams’ return to the football field after a 75-year hiatus.</p>
+        <p>When half of its team enlisted in World War II, Texas Wesleyan canceled its football program. This year a coach with just 16 scholarships to give reintroduces the Rams to Fort Worth.  Coach Joe Prud’homme, a 7-time Texas state champion at Nolan Catholic, faces the greatest challenge of his career. On a high school football field. With a quarterback who is hard of hearing. In a neighborhood that folks don’t visit without good reason. And while maintaining academic standards that surpass those of the biggest and best programs in the state.</p>
+        <p>Full episodes will drop right here on this page starting in January, 2018.</p>
+      </div>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>

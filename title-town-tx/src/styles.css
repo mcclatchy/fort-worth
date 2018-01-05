@@ -1,0 +1,70 @@
+/**
+ * Lexington video project styles
+ */
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: "mcclatchy-sans", Helvetica, sans-serif;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+.lead {
+  margin-top: 0;
+  position: relative;
+  display: block;
+}
+
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video {
+  flex: 0 1 160px;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.preview {
+  position: relative;
+}
+
+.play-icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  height: 40px;
+}
+
+h1 {
+  font-size: 17px;
+  margin: 0.5rem 0;
+  text-align: center;
+  white-space: normal;
+}
+
+h2 {
+  color: #ffcf28;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 769px) {
+  h1 {
+    font-size: 15px;
+  }
+}
