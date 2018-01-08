@@ -1,46 +1,74 @@
 {
-  "videos": [
-    {
-      "id": "5662477086001",
-      "title": "Built From Scratch",
-      "description": "After a summer of preparation and construction, the Broncos play their first game against dominant Danville.",
-      "image": "ep1thumbnail.jpg"
-    },
-    {
-      "id": "5662459085001",
-      "title": "Home Field Advantage",
-      "description": "The Broncos first home game comes with another welcome first.",
-      "image": "ep2thumbnail.jpg"
-    },
-    {
-      "id": "5663569757001",
-      "title": "Facing Tradition",
-      "description": "On a winning streak, the Broncos face central Kentucky powerhouse Scott County.",
-      "image": "ep3thumbnail.jpg"
-    },
-    {
-      "id": "5663567253001",
-      "title": "Kings of Lexington",
-      "description": "As the team wraps up the regular season, a homecoming king is crowned and the team takes the top spot in town.",
-      "image": "ep4thumbnail.jpg"
-    },
-    {
-      "id": "5664102617001",
-      "title": "Changing colors",
-      "description": "For these two Broncos, starting at a new school is old news.",
-      "image": "ep5thumbnail.jpg"
-    },
-    {
-      "id": "5663602322001",
-      "title": "Survive and Advance",
-      "description": "Time for playoffs. The Broncos face two familiar opponents in the first two rounds.",
-      "image": "ep6thumbnail.jpg"
-    },
-    {
-      "id": "5664016570001",
-      "title": "Rematch",
-      "description": "November 17 has been circled on the schedule. The Broncos head back to Scott County.",
-      "image": "ep7thumbnail.jpg"
-    }
-  ]
+  "seasons": {
+    "one": [
+      {
+        "id": "5662477086001",
+        "title": "Built From Scratch",
+        "description": "After a summer of preparation and construction, the Broncos play their first game against dominant Danville.",
+        "image": "ep1thumbnail.jpg"
+      },
+      {
+        "id": "5662459085001",
+        "title": "Home Field Advantage",
+        "description": "The Broncos first home game comes with another welcome first.",
+        "image": "ep2thumbnail.jpg"
+      },
+      {
+        "id": "5663569757001",
+        "title": "Facing Tradition",
+        "description": "On a winning streak, the Broncos face central Kentucky powerhouse Scott County.",
+        "image": "ep3thumbnail.jpg"
+      },
+      {
+        "id": "5663567253001",
+        "title": "Kings of Lexington",
+        "description": "As the team wraps up the regular season, a homecoming king is crowned and the team takes the top spot in town.",
+        "image": "ep4thumbnail.jpg"
+      },
+      {
+        "id": "5664102617001",
+        "title": "Changing colors",
+        "description": "For these two Broncos, starting at a new school is old news.",
+        "image": "ep5thumbnail.jpg"
+      },
+      {
+        "id": "5663602322001",
+        "title": "Survive and Advance",
+        "description": "Time for playoffs. The Broncos face two familiar opponents in the first two rounds.",
+        "image": "ep6thumbnail.jpg"
+      },
+      {
+        "id": "5664016570001",
+        "title": "Rematch",
+        "description": "November 17 has been circled on the schedule. The Broncos head back to Scott County.",
+        "image": "ep7thumbnail.jpg"
+      }
+    ],
+    "two": [
+      {
+        "id": "5663567253001",
+        "title": "Kings of Lexington",
+        "description": "As the team wraps up the regular season, a homecoming king is crowned and the team takes the top spot in town.",
+        "image": "ep4thumbnail.jpg"
+      },
+      {
+        "id": "5664102617001",
+        "title": "Changing colors",
+        "description": "For these two Broncos, starting at a new school is old news.",
+        "image": "ep5thumbnail.jpg"
+      },
+      {
+        "id": "5663602322001",
+        "title": "Survive and Advance",
+        "description": "Time for playoffs. The Broncos face two familiar opponents in the first two rounds.",
+        "image": "ep6thumbnail.jpg"
+      },
+      {
+        "id": "5664016570001",
+        "title": "Rematch",
+        "description": "November 17 has been circled on the schedule. The Broncos head back to Scott County.",
+        "image": "ep7thumbnail.jpg"
+      }
+    ]
+  }
 }

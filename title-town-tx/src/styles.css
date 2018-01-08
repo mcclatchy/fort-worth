@@ -9,6 +9,25 @@ body {
   font-family: "mcclatchy-sans", Helvetica, sans-serif;
 }
 
+.seasons {
+  display: flex;
+  justify-content: center;
+}
+
+.seasons a {
+  padding: 1rem;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.seasons[data-active=season-one] a[data-id=season-one] {
+  color: #ffcf28;
+}
+
+.seasons[data-active=season-two] a[data-id=season-two] {
+  color: #ffcf28;
+}
+
 figure {
   margin: 1rem 0;
 }
@@ -20,9 +39,17 @@ figure {
 }
 
 .playlist {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.playlists[data-active=season-one] .playlist[data-id=season-one] {
+  display: flex;
+}
+
+.playlists[data-active=season-two] .playlist[data-id=season-two] {
+  display: flex;
 }
 
 .video {
