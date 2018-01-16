@@ -34,3 +34,8 @@ div[id^=content-body] #videos {
   border: none;
   background-color: black;
 }
+
+div[id^=content-body] .white-background {
+  background-color: #ffffff;
+  color: black;
+}
