@@ -22,10 +22,9 @@ div[id^=content-body] p {
   font: 500 18px "McClatchy Sans Cond" , Arial, sans-serif;
 }
 
-div[id^=content-body] .social svg {
+div[id^=content-body] .social img {
   width: 64px;
   height: 64px;
-  fill: white;
   cursor: pointer;
 }
 
