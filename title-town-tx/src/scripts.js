@@ -1,3 +1,9 @@
+var player;
+var videos = document.querySelectorAll(".video");
+var seasons = document.querySelector(".seasons");
+var playlists = document.querySelector(".playlists");
+var vAnalytics = new mistats.VideoPlayer();
+
 function sendHeight() {
   window.parent.postMessage({
     sentinel: 'amp',
@@ -21,6 +27,16 @@ function debounce(func, wait, immediate) {
 	};
 };
 
+function swapVideo(id) {
+  player.catalog.getVideo(id, function(err, video) {
+    player.catalog.load(video);
+  });
+}
+
+/**
+ * Generic resize events
+ */
+
 window.addEventListener('load', sendHeight);
 window.addEventListener('resize', debounce(sendHeight, 200)); 
 
@@ -28,23 +44,25 @@ window.addEventListener('resize', debounce(sendHeight, 200));
  * Brightcove manual implementation for Omniture integration
  */
 
-var player;
-
 videojs("mainPlayer").ready(function() {
   player = this;
-});
+  player.on("play", function() {
+    let info = player.mediainfo;
+    let payload = {
+      title: info.name,
+      duration: info.duration,
+      vgrapher: info.customFields.byline1,
+      pageName: 'Title Town, TX'
+    }
 
-function swapVideo(id) {
-  player.catalog.getVideo(id, function(err, video) {
-    player.catalog.load(video);
+    vAnalytics.start(payload);
   });
-}
+});
 
 /*
  * Add the event
  */
 
-var videos = document.querySelectorAll(".video");
 for(i = 0, len = videos.length; i < len; i++) {
   var v = videos[i];
   v.addEventListener("click", function() {
@@ -60,18 +78,21 @@ for(i = 0, len = videos.length; i < len; i++) {
  * Season selector event
  */
 
-var seasonSelector = document.querySelector(".seasons");
-seasonSelector.addEventListener("click", function(e) {
+seasons.addEventListener("click", function(e) {
   season = e.target.dataset.id;
   if(season) {
     // swap selector
-    seasonSelector.dataset.active = season;
+    this.dataset.active = season;
 
     // swap playlist
-    document.querySelector(".playlists").dataset.active = season;
+    playlists.dataset.active = season;
 
     // swap to first video
-    swapVideo(document.querySelector(`.playlist[data-id=${season}]`).querySelector('.video').dataset.id);
+    let playlist = document.querySelector(`.playlist[data-id=${season}]`);
+    let video = playlist.querySelector(".video");
+    if(video) {
+      swapVideo(video.dataset.id);
+    }
 
     // resend the new height
     sendHeight();

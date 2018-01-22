@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="seasons" data-active="season-one">
+    <div class="seasons" data-active="season-two">
       <a data-id="season-two">SEASON 2</a>
       <a data-id="season-one">SEASON 1</a>
     </div>
@@ -22,7 +22,7 @@
           class="video-js"
           data-account="5615998025001"
           data-player="rkmh8oyHz"
-          data-video-id="5714573752001"
+          data-video-id="5715778991001"
           data-embed="default"
           controls
           style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></video>
@@ -30,7 +30,7 @@
       </div>
     </figure>
 
-    <div class="playlists" data-active="season-one">
+    <div class="playlists" data-active="season-two">
       
       <div class="playlist" data-id="season-one" >
         
@@ -437,7 +437,7 @@
       
       <div class="playlist" data-id="season-two" >
         
-        <div class="video" data-id="5714573752001" data-title="Season 2 Trailer">
+        <div class="video" data-id="5715778991001" data-title="Season 2 Trailer">
           <h2>Trailer</h2>
           <div class="preview">
             <img src="./img/160/s2trailer.jpg">
@@ -460,9 +460,15 @@
       
     </div>
 
-    <script>function sendHeight(){window.parent.postMessage({sentinel:'amp',type:'embed-size',height:document.body.scrollHeight},'*');}
-function debounce(func,wait,immediate){var timeout;return function(){var context=this,args=arguments;var later=function(){timeout=null;if(!immediate)func.apply(context,args);};var callNow=immediate&&!timeout;clearTimeout(timeout);timeout=setTimeout(later,wait);if(callNow)func.apply(context,args);};};window.addEventListener('load',sendHeight);window.addEventListener('resize',debounce(sendHeight,200));var player;videojs("mainPlayer").ready(function(){player=this;});function swapVideo(id){player.catalog.getVideo(id,function(err,video){player.catalog.load(video);});}
-var videos=document.querySelectorAll(".video");for(i=0,len=videos.length;i<len;i++){var v=videos[i];v.addEventListener("click",function(){swapVideo(this.dataset.id);window.parent.postMessage({sentinel:'video-scroll'},'*');});}
-var seasonSelector=document.querySelector(".seasons");seasonSelector.addEventListener("click",function(e){season=e.target.dataset.id;if(season){seasonSelector.dataset.active=season;document.querySelector(".playlists").dataset.active=season;swapVideo(document.querySelector(`.playlist[data-id=${season}]`).querySelector('.video').dataset.id);sendHeight();};})</script>
+    <!-- Analytics -->
+    <script type="text/javascript" src="https://media.mcclatchyinteractive.com/misites/dfw/star-telegram.js"></script>
+    <script type="text/javascript" src="https://media.mcclatchyinteractive.com/mistats/products/video_analytics.js"></script>
+
+    <script>var player;var videos=document.querySelectorAll(".video");var seasons=document.querySelector(".seasons");var playlists=document.querySelector(".playlists");var vAnalytics=new mistats.VideoPlayer();function sendHeight(){window.parent.postMessage({sentinel:'amp',type:'embed-size',height:document.body.scrollHeight},'*');}
+function debounce(func,wait,immediate){var timeout;return function(){var context=this,args=arguments;var later=function(){timeout=null;if(!immediate)func.apply(context,args);};var callNow=immediate&&!timeout;clearTimeout(timeout);timeout=setTimeout(later,wait);if(callNow)func.apply(context,args);};};function swapVideo(id){player.catalog.getVideo(id,function(err,video){player.catalog.load(video);});}
+window.addEventListener('load',sendHeight);window.addEventListener('resize',debounce(sendHeight,200));videojs("mainPlayer").ready(function(){player=this;player.on("play",function(){let info=player.mediainfo;let payload={title:info.name,duration:info.duration,vgrapher:info.customFields.byline1,pageName:'Title Town, TX'}
+vAnalytics.start(payload);});});for(i=0,len=videos.length;i<len;i++){var v=videos[i];v.addEventListener("click",function(){swapVideo(this.dataset.id);window.parent.postMessage({sentinel:'video-scroll'},'*');});}
+seasons.addEventListener("click",function(e){season=e.target.dataset.id;if(season){this.dataset.active=season;playlists.dataset.active=season;let playlist=document.querySelector(`.playlist[data-id=${season}]`);let video=playlist.querySelector(".video");if(video){swapVideo(video.dataset.id);}
+sendHeight();};})</script>
   </body>
 </html>
