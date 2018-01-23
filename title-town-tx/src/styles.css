@@ -6,7 +6,7 @@ body {
   margin: 0;
   background-color: black;
   color: white;
-  font-family: "mcclatchy-sans", Helvetica, sans-serif;
+  font-family: "mcclatchy-sans-cond", Helvetica, sans-serif;
 }
 
 .seasons {
@@ -53,8 +53,9 @@ figure {
 }
 
 .video {
-  flex: 0 1 160px;
-  padding: 3px;
+  box-sizing: border-box;
+  flex: 0 1 200px;
+  padding: 4px 8px;
   cursor: pointer;
 }
 
@@ -69,8 +70,6 @@ figure {
   height: 100%;
   top: 0;
   object-fit: cover;
-  /* display: block; */
-  /* max-width: 100%; */
 }
 
 .play-icon-wrapper {
@@ -89,21 +88,15 @@ figure {
 }
 
 h1 {
-  font-size: 15px;
-  margin: 3px;
+  font-size: 20px;
+  margin: 5px;
   text-align: center;
   white-space: normal;
 }
 
 h2 {
-  font-size: 11px;
-  margin: 3px;
+  font-size: 14px;
+  margin: 5px;
   color: #ffcf28;
   text-align: center;
-}
-
-@media (max-width: 769px) {
-  h1 {
-    font-size: 13px;
-  }
 }

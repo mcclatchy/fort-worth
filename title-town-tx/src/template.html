@@ -7,13 +7,13 @@
     <title>Title Town TX video iframe</title>
 
     <style>
-      {{- file "styles.css" | minify "text/css" -}}
-      {{- file "mcclatchy-sans.css" | minify "text/css" -}}
+      {{- file "src/styles.css" | minify "text/css" -}}
+      {{- file "src/mcclatchy-sans-cond.css" | minify "text/css" -}}
     </style>
   </head>
 
   <body>
-    <div class="seasons" data-active="season-two">
+    <div class="seasons" data-active="season-one">
       <a data-id="season-two">SEASON 2</a>
       <a data-id="season-one">SEASON 1</a>
     </div>
@@ -33,7 +33,7 @@
       </div>
     </figure>
 
-    <div class="playlists" data-active="season-two">
+    <div class="playlists" data-active="season-one">
       {{ range $key, $season := .seasons }}
       <div class="playlist" data-id="season-{{ $key }}" >
         {{ range $key, $video := $season }}
@@ -42,7 +42,7 @@
           <div class="preview">
             <img src="./img/160/{{ $video.image }}">
             <div class="play-icon-wrapper">
-              <svg height="40" width="40" viewBox="0 0 552.8 552.8">
+              <svg height="25" width="25" viewBox="0 0 552.8 552.8">
                 <g>
                   <circle class="st0" cx="275.3" cy="275.3" r="264.2" fill="transparent"/>
                   <path class="st1" d="M424,260.2L213.5,138.6c-12.5-7.2-28.1,1.8-28.1,16.2v243c0,14.4,15.6,23.4,28.1,16.2L424,292.6
@@ -65,7 +65,7 @@
     <script type="text/javascript" src="https://media.mcclatchyinteractive.com/mistats/products/video_analytics.js"></script>
 
     <script>
-      {{- file "scripts.js" | minify "text/javascript" -}}
+      {{- file "src/scripts.js" | minify "text/javascript" -}}
     </script>
   </body>
 </html>

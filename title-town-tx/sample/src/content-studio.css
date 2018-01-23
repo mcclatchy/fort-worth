@@ -35,6 +35,18 @@ div[id^=content-body] #videos {
 }
 
 div[id^=content-body] .white-background {
-  background-color: #ffffff;
+  background-color: #ededed;
   color: black;
+}
+
+@media (max-width: 769px) {
+  .series-logo {
+    width: 185px;
+  }
+}
+
+@media (max-width: 500px) {
+  .series-logo {
+    width: 140px;
+  }
 }
