@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div class="seasons" data-active="season-one">
+    <div class="seasons" data-active="season-two">
       <a data-id="season-two">SEASON 2</a>
       <a data-id="season-one">SEASON 1</a>
     </div>
@@ -33,7 +33,7 @@
       </div>
     </figure>
 
-    <div class="playlists" data-active="season-one">
+    <div class="playlists" data-active="season-two">
       {{ range $key, $season := .seasons }}
       <div class="playlist" data-id="season-{{ $key }}" >
         {{ range $key, $video := $season }}
