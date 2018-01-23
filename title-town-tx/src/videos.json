@@ -2,113 +2,92 @@
   "seasons": {
     "one": [
       {
-        "id": "5714573752001",
         "title": "Season 1 Trailer",
         "image": "s1trailer.jpg",
         "kicker": "Trailer"
       },
       {
-        "id": "5714570172001",
         "title": "The Aledo Way",
         "image": "s1ep1.jpg",
         "kicker": "Episode 1"
       },
       {
-        "id": "5714575877001",
         "title": "Facing Tradition",
         "image": "s1ep2.jpg",
         "kicker": "Episode 2"
       },
       {
-        "id": "5714572976001",
         "title": "Dillon's Destiny",
         "image": "s1ep3.jpg",
         "kicker": "Episode 3"
       },
       {
-        "id": "5714564704001",
         "title": "This One's For Trenten",
         "image": "s1ep4.jpg",
         "kicker": "Episode 4"
       },
       {
-        "id": "5714571710001",
         "title": "The Importance of Being Ernest",
         "image": "s1ep5.jpg",
         "kicker": "Episode 5"
       },
       {
-        "id": "5714639476001",
         "title": "The Backup Plan",
         "image": "s1ep6.jpg",
         "kicker": "Episode 6"
       },{
-        "id": "5714643161001",
         "title": "United They Stand",
         "image": "s1ep7.jpg",
         "kicker": "Episode 7"
       },{
-        "id": "5714645668001",
         "title": "The Spirit of Aledo",
         "image": "s1ep8.jpg",
         "kicker": "Episode 8"
       },{
-        "id": "5714639487001",
         "title": "Playing it Forward",
         "image": "s1ep9.jpg",
         "kicker": "Episode 9"
       },{
-        "id": "5714642760001",
         "title": "Letter of Intent",
         "image": "s1ep10.jpg",
         "kicker": "Episode 10"
       },{
-        "id": "5714644611001",
         "title": "The House that Buc Built",
         "image": "s1ep11.jpg",
         "kicker": "Episode 11"
       },{
-        "id": "5714644613001",
         "title": "The Sound of Aledo",
         "image": "s1ep12.jpg",
         "kicker": "Episode 12"
       },{
-        "id": "5714655953001",
         "title": "The Last Dance",
         "image": "s1ep13.jpg",
         "kicker": "Episode 13"
       },{
-        "id": "5714644615001",
         "title": "They Call Him Big Game James",
         "image": "s1ep14.jpg",
         "kicker": "Episode 14"
       },{
-        "id": "5714653939001",
         "title": "The Best Defense",
         "image": "s1ep15.jpg",
         "kicker": "Episode 15"
       },{
-        "id": "5714658140001",
         "title": "Thankful for Playoff Football",
         "image": "s1ep16.jpg",
         "kicker": "Episode 16"
       },{
-        "id": "5714662281001",
         "title": "Cowboy Up",
         "image": "s1ep17.jpg",
         "kicker": "Episode 17"
       },{
-        "id": "5714665838001",
         "title": "'Six Seconds' to State",
         "image": "s1ep18.jpg",
         "kicker": "Episode 18"
       },{
-        "id": "5715375713001",
         "title": "Titletown, Texas",
         "image": "s1ep19.jpg",
         "kicker": "Episode 19"
       },{
-        "id": "5715308999001",
         "title": "Epilogue: Always A Bearcat",
         "image": "s1ep20.jpg",
         "kicker": "Episode 20"
@@ -116,10 +95,13 @@
     ],
     "two": [
       {
-        "id": "5715778991001",
         "title": "Season 2 Trailer",
         "image": "s2trailer.jpg",
         "kicker": "Trailer"
+      },{
+        "title": "Resurrecting the Rams",
+        "image": "s2ep1.jpg",
+        "kicker": "Episode 1"
       }
     ]
   }

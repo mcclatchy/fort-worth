@@ -1,7 +1,6 @@
-var player;
+var player, playlist;
 var videos = document.querySelectorAll(".video");
-var seasons = document.querySelector(".seasons");
-var playlists = document.querySelector(".playlists");
+var seasonSelector = document.querySelector(".season-selector");
 var vAnalytics = new mistats.VideoPlayer();
 
 function sendHeight() {
@@ -27,12 +26,6 @@ function debounce(func, wait, immediate) {
 	};
 };
 
-function swapVideo(id) {
-  player.catalog.getVideo(id, function(err, video) {
-    player.catalog.load(video);
-  });
-}
-
 /**
  * Generic resize events
  */
@@ -46,8 +39,15 @@ window.addEventListener('resize', debounce(sendHeight, 200));
 
 videojs("mainPlayer").ready(function() {
   player = this;
+
+  // Settings
+  player.playlist.autoadvance(0);
+
+  // Events
   player.on("play", function() {
-    let info = player.mediainfo;
+    let plist = player.playlist();
+    let info = plist[player.playlist.currentIndex()];
+
     let payload = {
       title: info.name,
       duration: info.duration,
@@ -60,13 +60,18 @@ videojs("mainPlayer").ready(function() {
 });
 
 /*
- * Add the event
+ * Thumbnail click event
  */
 
 for(i = 0, len = videos.length; i < len; i++) {
   var v = videos[i];
   v.addEventListener("click", function() {
-    swapVideo(this.dataset.id);
+    let list = this.parentNode.querySelectorAll(".video");
+    let index = Array.prototype.indexOf.call(list, this);
+
+    if(index > -1) {
+      player.playlist.currentItem(index);
+    }
 
     window.parent.postMessage({
       sentinel: 'video-scroll'
@@ -78,23 +83,18 @@ for(i = 0, len = videos.length; i < len; i++) {
  * Season selector event
  */
 
-seasons.addEventListener("click", function(e) {
-  season = e.target.dataset.id;
-  if(season) {
-    // swap selector
-    this.dataset.active = season;
+seasonSelector.addEventListener("click", function(e) {
+  let season = e.target.dataset.id;
+  let playlistID = e.target.dataset.playlist;
 
-    // swap playlist
-    playlists.dataset.active = season;
+  if(season && playlistID) {
+    document.body.dataset.active = season;
+    player.catalog.getPlaylist(playlistID, function(err, list) {
+      player.catalog.load(list);
+      player.pause();
+      player.playlist.first();
+    })
+  }
 
-    // swap to first video
-    let playlist = document.querySelector(`.playlist[data-id=${season}]`);
-    let video = playlist.querySelector(".video");
-    if(video) {
-      swapVideo(video.dataset.id);
-    }
-
-    // resend the new height
-    sendHeight();
-  };
+  sendHeight();
 })

@@ -9,22 +9,22 @@ body {
   font-family: "mcclatchy-sans-cond", Helvetica, sans-serif;
 }
 
-.seasons {
+.season-selector {
   display: flex;
   justify-content: center;
 }
 
-.seasons a {
+.season-selector a {
   padding: 1rem;
   font-size: 19px;
   cursor: pointer;
 }
 
-.seasons[data-active=season-one] a[data-id=season-one] {
+body[data-active=season-one] a[data-id=season-one] {
   color: #ffcf28;
 }
 
-.seasons[data-active=season-two] a[data-id=season-two] {
+body[data-active=season-two] a[data-id=season-two] {
   color: #ffcf28;
 }
 
@@ -38,17 +38,17 @@ figure {
   display: block;
 }
 
-.playlist {
+.thumbnails {
   display: none;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.playlists[data-active=season-one] .playlist[data-id=season-one] {
+body[data-active=season-one] #season-one {
   display: flex;
 }
 
-.playlists[data-active=season-two] .playlist[data-id=season-two] {
+body[data-active=season-two] #season-two {
   display: flex;
 }
 
