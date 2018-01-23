@@ -95,13 +95,13 @@
     ],
     "two": [
       {
-        "title": "Season 2 Trailer",
-        "image": "s2trailer.jpg",
-        "kicker": "Trailer"
-      },{
         "title": "Resurrecting the Rams",
         "image": "s2ep1.jpg",
         "kicker": "Episode 1"
+      },{
+        "title": "Season 2 Trailer",
+        "image": "s2trailer.jpg",
+        "kicker": "Trailer"
       }
     ]
   }

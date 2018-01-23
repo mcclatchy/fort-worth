@@ -50,3 +50,9 @@ div[id^=content-body] .white-background {
     width: 140px;
   }
 }
+
+/** bottom overloads **/
+
+.container[role=main] + .container .ad, #footer {
+  margin: 0;
+}
