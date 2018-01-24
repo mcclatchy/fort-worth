@@ -19,17 +19,12 @@
 }
 
 .video-js .vjs-dock-description {
-  font-size: 18px;
-  font-family: "mcclatchy-sans-cond", Helvetica;
+  display: none;
 }
 
 @media (max-width: 600px) {
   .video-js .vjs-dock-title {
     font-size: 24px;
-  }
-
-  .video-js .vjs-dock-description {
-    font-size: 13px;
   }
 }
 
