@@ -6,7 +6,7 @@
   bottom: 0;
   top: auto;
   text-align: center;
-  padding: 1em;
+  padding: 1.5em 1em 40px;
   background: linear-gradient(to top,rgba(0,0,0,.9), rgba(0,0,0,.7) 85%,transparent 100%);
 }
 
@@ -19,12 +19,17 @@
 }
 
 .video-js .vjs-dock-description {
-  display: none;
+  font-size: 18px;
+  font-family: "mcclatchy-sans-cond", Helvetica;
 }
 
 @media (max-width: 600px) {
   .video-js .vjs-dock-title {
     font-size: 24px;
+  }
+
+  .video-js .vjs-dock-description {
+    font-size: 13px;
   }
 }
 
