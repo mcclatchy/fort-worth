@@ -95,6 +95,10 @@
     ],
     "two": [
       {
+        "title": "First and Long",
+        "image": "s2ep3.jpg",
+        "kicker": "Episode 3"
+      },{
         "title": "Starting Over",
         "image": "s2ep2.jpg",
         "kicker": "Episode 2"
